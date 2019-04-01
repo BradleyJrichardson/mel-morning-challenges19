@@ -24,6 +24,7 @@ class ProductListTest < MiniTest::Test
     def test_find_by_name
         found_product = @product_list.find_by_name('Gadget')
         assert_equal 9.99, found_product.price
+        assert_equal 'Gadget', found_product.name
     end
 
     def test_sort_by_price
