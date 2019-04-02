@@ -3,16 +3,12 @@ require_relative 'product'
 require_relative 'product_list'
 
 class ProductListTest < MiniTest::Test
-    def setup
-        @product_list = ProductList.new([
-            Product.new({
-            :name => 'Widgit',
-            :price => '10.99'
-        }),
+  def setup
+      @product_list = ProductList.new([
         Product.new({
-            :name => 'Gadget',
-            :price => '9.99'
-        }),
+          :name => 'Widgit',
+          :price => '10.99'
+      }),
         Product.new({
             :name => 'Sample',
             :price => '19.99'
