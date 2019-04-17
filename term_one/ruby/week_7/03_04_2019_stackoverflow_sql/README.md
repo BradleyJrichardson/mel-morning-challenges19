@@ -15,10 +15,25 @@ select top 100 * from users;
 - Make the order by desc  
 - Who is the top user?  
 
+```sql
+select top 100 * from users
+ORDER BY reputation DESC;
+```
+
+
+
 - Add a where clause for location to see what users are in Melbourne
 - Use like in the where clause
 
+```sql
+select top 100 * from users
+WHERE Location LIKE '%Australia%'
+ORDER BY reputation DESC;
+```
+
+
 - Use count to count total number of users
+
 
 - Use count and group by to see how many users per location  
 - Order by count   
