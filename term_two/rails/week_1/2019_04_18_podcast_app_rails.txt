@@ -1,0 +1,39 @@
+we're creating a rails podcast app this morning
+
+generate the rails app
+
+a podcast has a name (string), genre (string) and whether it contains explicit_content (boolean) 
+
+a podcast has many episodes
+
+an episode has a title (string), show notes (string) and an mp3_file (string)
+
+create these models 
+
+run the migrations
+
+whoops 🤪 we forgot about the podcast_id for the episodes model 
+
+run a migration to add the podcast_id column to episodes, use the podcast:references technique to do this, follow this stack overflow comment https://stackoverflow.com/a/22815259
+
+generate the podcasts controller, make it have index, new, create, show, edit, update and delete endpoints
+
+generate the episodes controller, make it have the create endpoint
+
+add the index, new, show and edit views, they can be bare bones for now 
+
+the new form is just for adding a podcast 
+
+on the podcasts show page add a form that allows you to create a new episode for that specific podcast (the create endpoint for episodes)
+
+we decide we need to add a channel image (string) column to the podcast table, run the migration to do this
+
+we also decide we don't care about the explicit content column so we'll drop it from the podcast table, run the migration to do this 
+
+we also decide we want to add a rating (integer) for each episode, run the migration to do this
+
+add validations for the podcast model to ensure all it's fields are present (all the fields are filled)
+
+add a validation for podcast name to ensure it's unique
+
+add a validation for the show notes to ensure that it's no longer than 100 words
