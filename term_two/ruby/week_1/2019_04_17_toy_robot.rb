@@ -25,3 +25,10 @@ table = [
 # handle all edge cases with user input
 
 # consider using a Robot class to implement the same logic
+
+while true
+  input = gets.chomp
+  if input == 'exit'
+    exit
+  end 
+end

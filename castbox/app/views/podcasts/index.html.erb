@@ -1,0 +1,9 @@
+<h1>Welcome to Castbox</h1>
+<h3>Index</h3>
+
+
+<% @podcasts.each_with_index do |podcast, index| %>
+  <div>
+    <p> <%= podcast.name %><%= link_to "show", podcast_path(podcast.id) %> </p>
+  </div>
+<% end %>

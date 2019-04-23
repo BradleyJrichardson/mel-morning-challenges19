@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  show_notes: MyString
+  mp3_file: MyString
+
+two:
+  title: MyString
+  show_notes: MyString
+  mp3_file: MyString

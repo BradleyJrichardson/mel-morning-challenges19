@@ -1,0 +1,34 @@
+<h1>Welcome to Castbox</h1>
+<h3>Show</h3>
+
+
+
+<% @podcast.episodes.each do |episode| %>
+  <div>
+    <p><%= episode.title %></p>
+  </div>
+<% end %>
+
+
+<h3>Add a Episode</h3>
+<form action="<%= episode_path %>" method="POST" >
+    <input type="hidden" value="<%= form_authenticity_token %>" name="authenticity_token" />
+    <input type="hidden" value="<%= @podcast.id %>" name="podcast_id" />
+
+    <label for="title">Title</label>
+    <input type="text" name="title" id="title"/>
+
+    <label for="Show_notes">show_notes</label>
+    <input type="text" name="Show_notes" id="Show_notes"/>
+
+    <label for="mp3_file">mp3_file</label>
+    <input type="text" name="mp3_file" id="mp3_file"/>
+
+    <label for="rating">Rating</label>
+    <input type="text" name="rating" id="rating" />
+
+    <input type="submit" value="Create" />
+</form>
+
+<%= link_to "Back", :back %>
+
